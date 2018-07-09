@@ -42,7 +42,15 @@ def register(name):
             cur = request.form['project']
             cur = cur.lower()
             cur = cur.replace(" ", "_")
-            db.getset(cur, "http://" + str(request.form['location']))
+
+            urlstring = str(request.form['location'])
+
+            if urlstring.startswith('https://') or urlstring.startswith('http://'):
+                urlstring = urlstring
+            else:
+                urlstring = "http://" + urlstring
+                
+            db.getset(cur, urlstring)
 
             return render_template('registersuccess.html', proj='http://getbit.host/' + cur)
         else:
