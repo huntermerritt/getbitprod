@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Register Domain</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script style="https://cdnjs.com/libraries/bulma"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='myfavicon.ico') }}">
+
+</head>
+<style>
+
+    body
+    {
+        background-image: url("../static/back.png");
+        background-size: cover;
+        font-family: 'Roboto', sans-serif;
+    }
+
+</style>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 10vh">
+    <a class="navbar-brand" href="#" style="max-height: 10vh;"><img src="../static/getbit.png" style="height: 7vh;"></a>
+
+</nav>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-12" style="height: 5vh;"></div>
+
+        <div class="col-12" style="height: 85vh; background-color: transparent; border-radius: 5px;">
+            <div style="height: 5vh;"></div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Project Register</h5>
+
+                    <form action="{{ url_for('register') }}" method="post">
+
+                        <div class="form-group">
+                            <label for="searchtext">Project Name:</label>
+                            <input type="text" class="form-control" id="searchtext" name="project" placeholder="introducingcronhub">
+                            <p style="color: red;">Sorry that name is already taken.</p>
+                            <label for="locationtext">Project Location:</label>
+                            <input type="text" class="form-control" id="locationtext" name="location" placeholder="https://www.indiehackers.com/@tigran/how-i-shipped-my-first-saas-side-project-while-working-full-time-42862e847b">
+                        </div>
+
+                        <div class="form-group" style="text-align: center;">
+                            <input type="submit" class="btn btn-outline-dark" title="Register">
+                        </div>
+
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+</body>
+</html>
