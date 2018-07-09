@@ -47,26 +47,17 @@
             <div style="height: 5vh;"></div>
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Project Register</h5>
+                    <h5 class="card-title">Congrats! You've created a new link!</h5>
 
-                    <form>
+                    <div style="height: 10vh;"></div>
 
-                        <div class="form-group">
-                            <label for="searchtext">Project Name:</label>
-                            <input type="text" class="form-control" id="searchtext" name="project" placeholder="introducingcronhub">
-                            <br>
-                            <label for="locationtext">Project Location:</label>
-                            <input type="text" class="form-control" id="locationtext" name="location" placeholder="https://www.indiehackers.com/@tigran/how-i-shipped-my-first-saas-side-project-while-working-full-time-42862e847b">
-                        </div>
+                    <div style="text-align: center;">
 
-                        <div class="form-group" style="text-align: center;">
-                            <input type="submit" class="btn btn-outline-dark" title="Register">
-                        </div>
+                        <a href="{{ proj|safe }}" class="btn btn-success">Visit your new project at: {{ proj|safe }}</a>
 
+                    </div>
 
-                    </form>
-
-                    <a href="{{ proj|safe }}" class="btn btn-success">Visit your new project at: {{ proj|safe }}</a>
+                    <div style="height: 10vh;"></div>
 
                 </div>
             </div>

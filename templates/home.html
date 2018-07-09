@@ -71,15 +71,28 @@
                     <form action="{{ url_for('register') }}" method="post">
 
                         <div class="form-group">
-                            <label for="searchtext">Display Name:</label>
-                            <input type="text" class="form-control" id="searchtext" name="project" placeholder="introducingcronhub">
+                            <label for="searchtext">New Address:</label>
+
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon3">getbit.host/</span>
+                              </div>
+                              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" name="project" placeholder="introducingcronhub">
+                            </div>
                             <br>
-                            <label for="locationtext">IP address or URL:</label>
-                            <input type="text" class="form-control" id="locationtext" name="location" placeholder="https://www.indiehackers.com/@tigran/how-i-shipped-my-first-saas-side-project-while-working-full-time-42862e847b">
+
+                            <label for="searchtext">Link or URL:</label>
+
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon4">http://</span>
+                              </div>
+                              <input type="text" class="form-control" id="basic-url4" aria-describedby="basic-addon4" name="location" placeholder="www.indiehackers.com/@tigran/how-i-shipped-my-first-saas-side-project-while-working-full-time-42862e847b">
+                            </div>
                         </div>
 
                         <div class="form-group" style="text-align: center;">
-                            <input type="submit" class="btn btn-outline-dark" title="Register">
+                            <input type="submit" class="btn btn-outline-dark" title="Register" value="Create Link!">
                         </div>
 
 

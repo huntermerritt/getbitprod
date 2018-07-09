@@ -42,7 +42,7 @@ def register(name):
             cur = request.form['project']
             cur = cur.lower()
             cur = cur.replace(" ", "_")
-            db.getset(cur, str(request.form['location']))
+            db.getset(cur, "http://" + str(request.form['location']))
 
             return render_template('registersuccess.html', proj='http://getbit.host/' + cur)
         else:
@@ -62,4 +62,4 @@ def register(name):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True, port=80)
+    app.run(host='0.0.0.0', debug=True, port=5000)
